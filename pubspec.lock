@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "2.4.0"
   azlistview:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: azlistview
       url: "https://pub.flutter-io.cn"
@@ -128,7 +128,7 @@ packages:
     source: hosted
     version: "7.0.9"
   cached_network_image:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cached_network_image
       url: "https://pub.flutter-io.cn"
@@ -170,7 +170,7 @@ packages:
     source: hosted
     version: "1.14.11"
   connectivity:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: connectivity
       url: "https://pub.flutter-io.cn"
@@ -205,7 +205,7 @@ packages:
     source: hosted
     version: "2.1.1"
   cookie_jar:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cookie_jar
       url: "https://pub.flutter-io.cn"
@@ -247,7 +247,7 @@ packages:
     source: hosted
     version: "3.0.8"
   dio_cookie_manager:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: dio_cookie_manager
       url: "https://pub.flutter-io.cn"
@@ -266,7 +266,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_app_badger:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_app_badger
       url: "https://pub.flutter-io.cn"
@@ -287,7 +287,7 @@ packages:
     source: hosted
     version: "1.1.0"
   flutter_downloader:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_downloader
       url: "https://pub.flutter-io.cn"
@@ -320,7 +320,7 @@ packages:
     source: hosted
     version: "0.8.2"
   flutter_native_image:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_native_image
       url: "https://pub.flutter-io.cn"
@@ -334,7 +334,7 @@ packages:
     source: hosted
     version: "1.0.6"
   flutter_screenutil:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_screenutil
       url: "https://pub.flutter-io.cn"
@@ -348,7 +348,7 @@ packages:
     source: hosted
     version: "0.3.0"
   flutter_svg:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_svg
       url: "https://pub.flutter-io.cn"
@@ -421,7 +421,7 @@ packages:
     source: hosted
     version: "2.1.4"
   image_cropper:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: image_cropper
       url: "https://pub.flutter-io.cn"
@@ -470,7 +470,7 @@ packages:
     source: hosted
     version: "0.6.1+1"
   json_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: json_annotation
       url: "https://pub.flutter-io.cn"
@@ -493,7 +493,7 @@ packages:
     source: git
     version: "0.6.2"
   keyboard_visibility:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: keyboard_visibility
       url: "https://pub.flutter-io.cn"
@@ -570,7 +570,7 @@ packages:
     source: hosted
     version: "1.0.1+2"
   open_file:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: open_file
       url: "https://pub.flutter-io.cn"
@@ -584,7 +584,7 @@ packages:
     source: hosted
     version: "1.1.0"
   package_info:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: package_info
       url: "https://pub.flutter-io.cn"
@@ -633,7 +633,7 @@ packages:
     source: hosted
     version: "1.8.0+1"
   percent_indicator:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: percent_indicator
       url: "https://pub.flutter-io.cn"
@@ -647,7 +647,7 @@ packages:
     source: hosted
     version: "2.4.0"
   photo_view:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "."
       ref: master
@@ -705,7 +705,7 @@ packages:
     source: hosted
     version: "0.1.5"
   pull_to_refresh:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: pull_to_refresh
       url: "https://pub.flutter-io.cn"
@@ -761,7 +761,7 @@ packages:
     source: hosted
     version: "0.6.3+6"
   shared_preferences:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: shared_preferences
       url: "https://pub.flutter-io.cn"
@@ -864,7 +864,7 @@ packages:
     source: hosted
     version: "1.0.5"
   synchronized:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: synchronized
       url: "https://pub.flutter-io.cn"
@@ -913,7 +913,7 @@ packages:
     source: hosted
     version: "1.1.6"
   url_launcher:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: url_launcher
       url: "https://pub.flutter-io.cn"
@@ -969,7 +969,7 @@ packages:
     source: hosted
     version: "1.2.4"
   video_player:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: video_player
       url: "https://pub.flutter-io.cn"
@@ -997,14 +997,14 @@ packages:
     source: hosted
     version: "0.9.7+13"
   web_socket_channel:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: web_socket_channel
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.0"
   webview_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: webview_flutter
       url: "https://pub.flutter-io.cn"

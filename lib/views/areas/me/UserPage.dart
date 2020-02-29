@@ -20,6 +20,7 @@ import 'package:flutter_app/store/app.dart';
 import 'package:flutter_app/store/session.dart';
 import 'package:flutter_app/utils/ApplicationUtil.dart';
 import 'package:flutter_app/utils/ApplicatoinNavigatorUtil.dart';
+import 'package:flutter_app/views/common/SignPage.dart';
 
 class UserPage extends StatefulWidget {
   UserPage({Key key}) : super(key: key);
@@ -187,7 +188,7 @@ class UserPageState extends State<UserPage> {
           }),
           MenuTile(ApplicationLocalizations.of(context).text("articleCollection"), icon: 'article', handle: (){
             Navigator.of(context).pushNamed("/order");
-          }),
+          })
         ],
       ),
     );
