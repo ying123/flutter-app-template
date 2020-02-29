@@ -62,7 +62,6 @@ dependencies:
   webview_flutter : ^0.3.19+3
 #  sharesdk_plugin: 1.1.7
   keyboard_visibility: ^0.5.2 #软键盘
-  vibration: ^1.0.1 #震动
 #  flute_music_player: any #播放器
 #  audioplayers: any
   video_player: any

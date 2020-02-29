@@ -14,6 +14,10 @@ class ChatStore with ChangeNotifier {
   MessageDialog currentMessageDialog;
   bool connecting = false;
 
+  update() {
+    notifyListeners();
+  }
+
   accessChatByFriend(Friend friend) {
     MessageDialog messageDialog;
     try {
@@ -39,35 +43,8 @@ class ChatStore with ChangeNotifier {
     }
   }
 
-  _findMessageDialogByFriendUserId(int friendUserId) {
+  findMessageDialogByFriendUserId(int friendUserId) {
     return messageDialogs.firstWhere((messageDialog) => messageDialog.friendUserId == friendUserId);
-  }
-
-  onReceiveMessage(ChatMessage chatMessage) {
-    // 来自自己发送的消息
-    if (chatMessage.side == ChatSide.Sender) {
-      var message = messages.firstWhere((ChatMessage message) => message.sharedMessageId == chatMessage.sharedMessageId);
-      if (message == null) {
-        messages.add(chatMessage);
-        if (currentMessageDialog != null && chatMessage.targetUserId == currentMessageDialog.friendUserId) {
-          currentMessages.add(chatMessage);
-        }
-      }
-    }
-    // 来自好友发送的消息
-    else {
-      messages.add(chatMessage);
-      if (currentMessageDialog != null && chatMessage.targetUserId == currentMessageDialog.friendUserId) {
-        currentMessages.add(chatMessage);
-      }
-    }
-
-    if (chatMessage.side == ChatSide.Receiver) {
-      if (currentMessageDialog.friendUserId != chatMessage.targetUserId) {
-        MessageDialog messageDialog = _findMessageDialogByFriendUserId(chatMessage.targetUserId);
-        messageDialog.unreadCount++;
-      }
-    }
   }
 
   clearAll() {

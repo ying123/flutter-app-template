@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:canknow_flutter_ui/components/OnlineStatus.dart';
 import 'package:canknow_flutter_ui/utils/EventBus.dart';
 import 'package:canknow_flutter_ui/vendors/signalr/http_connection_options.dart';
@@ -33,7 +35,8 @@ class MessageHub {
       this.connect();
     });
 
-    hubConnection.on('getChatMessage', ([chatMessage]) {
+    hubConnection.on('getChatMessage', (chatMessageJson) {
+      ChatMessage chatMessage = ChatMessage.fromJson(chatMessageJson[0]);
       EventBus().emit('receiveChatMessage', chatMessage);
     });
     hubConnection.on('getFriendshipRequest', ([friend, isOwnRequest]) {
@@ -59,6 +62,12 @@ class MessageHub {
     AppStore appStore = Store.value<AppStore>(context);
     appStore.setOnlineStatus(OnlineStatusEnum.Online);
     await hubConnection.invoke('Register');
+  }
+
+  stop() async {
+    await hubConnection.stop();
+    AppStore appStore = Store.value<AppStore>(context);
+    appStore.setOnlineStatus(OnlineStatusEnum.Offline);
   }
 
   sendChatMessage(ChatMessage chatMessage) async {

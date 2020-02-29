@@ -82,16 +82,8 @@ class HomePageState extends State<HomePage> {
               onPressed: () async {
                 Navigator.of(context).pushNamed('/home/search');
               },
-              icon: ApplicationIcon('search', color: themeData.primaryIconTheme.color, size: Variables.componentSizeSmaller),
+              icon: ApplicationIcon('search', size: Variables.componentSizeSmaller),
             ),
-            PopupMenuButton(
-                icon: ApplicationIcon('menu', color: themeData.primaryIconTheme.color, size: Variables.componentSizeSmaller),
-                itemBuilder: (BuildContext context) {
-                  return [
-                    PopupMenuItem<String>(child: Text("热度"), value: "hot",),
-                  ];
-                }
-            )
           ],
         ),
         floatingActionButton: Offstage(

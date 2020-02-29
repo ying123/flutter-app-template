@@ -36,7 +36,7 @@ class _SplashState extends State<Splash> {
     firstBoot = !LocalStorage.getBool('firstBooted');
     if (firstBoot) {
       this.getGuides();
-      LocalStorage.setBool('firstBooted', false);
+      LocalStorage.setBool('firstBooted', true);
     }
     else {
       _doCountDown();

@@ -1,12 +1,15 @@
 import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/components/ApplicationIconButton.dart';
 import 'package:canknow_flutter_ui/components/EmptyContainer.dart';
+import 'package:canknow_flutter_ui/components/NoConnectionToServer.dart';
+import 'package:canknow_flutter_ui/components/OnlineStatus.dart';
 import 'package:canknow_flutter_ui/config/ComponentSize.dart';
 import 'package:canknow_flutter_ui/locale/ApplicationLocalizations.dart';
 import 'package:canknow_flutter_ui/utils/FileUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
 import 'package:flutter_app/models/MessageDialog.dart';
+import 'package:flutter_app/store/app.dart';
 import 'package:flutter_app/store/chat.dart';
 import 'package:flutter_app/store/index.dart';
 import 'package:flutter_app/views/areas/message/MessageDialogItem.dart';
@@ -22,6 +25,7 @@ class MessageDialogPageState extends State<MessageDialogPage> {
   @override
   Widget build(BuildContext context) {
     ChatStore chatStore = Store.value<ChatStore>(context);
+    var appStore = Store.value<AppStore>(context);
     return Scaffold(
         appBar: ApplicationAppBar(
           backgroundColor: Colors.white,
@@ -38,14 +42,21 @@ class MessageDialogPageState extends State<MessageDialogPage> {
               },
             ),
           ],),
-        body: Container(
-          child: chatStore.messageDialogs.length > 0 ? ListView.builder(
-            itemCount: chatStore.messageDialogs.length,
-            itemBuilder: (BuildContext context, int index) {
-              final MessageDialog messageDialog = chatStore.messageDialogs[index];
-              return MessageDialogItem(messageDialog);
-            },
-          ): EmptyContainer(image: Image.asset(FileUtil.getImagePath('data-empty')), detail: ApplicationLocalizations.of(context).text('noMessageYet'),),
+        body: Material(
+          child: Column(
+            children: <Widget>[
+              if(appStore.onlineStatus == OnlineStatusEnum.Offline) NoConnectionToServer(),
+              Expanded(
+                child: chatStore.messageDialogs.length > 0 ? ListView.builder(
+                  itemCount: chatStore.messageDialogs.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final MessageDialog messageDialog = chatStore.messageDialogs[index];
+                    return MessageDialogItem(messageDialog);
+                  },
+                ): EmptyContainer(image: Image.asset(FileUtil.getImagePath('data-empty')), detail: ApplicationLocalizations.of(context).text('noMessageYet'),),
+              )
+            ],
+          )
         )
     );
   }

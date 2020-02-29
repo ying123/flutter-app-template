@@ -1,10 +1,12 @@
 import 'dart:io';
 import 'package:canknow_flutter_ui/utils/EventBus.dart';
+import 'package:canknow_flutter_ui/utils/VibrationUtil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app/apis/file.dart';
 import 'package:flutter_app/application/MessageHub.dart';
 import 'package:flutter_app/models/ChatMessage.dart';
 import 'package:flutter_app/models/MessageContentType.dart';
+import 'package:flutter_app/models/MessageDialog.dart';
 import 'package:flutter_app/models/MessageStatus.dart';
 import 'package:flutter_app/models/MessageType.dart';
 import 'package:flutter_app/models/UserChatFriendsWithSettings.dart';
@@ -15,7 +17,9 @@ import '../store/chat.dart';
 class MessageManage {
   BuildContext context;
 
-  MessageManage._internal();
+  MessageManage._internal() {
+    this.handleEvents();
+  }
 
   static MessageManage _singleton = new MessageManage._internal();
   factory MessageManage() => _singleton;
@@ -23,7 +27,17 @@ class MessageManage {
   initialize(context) async {
     this.context = context;
     try {
+
       await MessageHub().initialize(context);
+    }
+    catch(e) {
+
+    }
+  }
+
+  stop() async {
+    try {
+      await MessageHub().stop();
     }
     catch(e) {
 
@@ -38,7 +52,32 @@ class MessageManage {
 
   _onReceiveMessage(ChatMessage chatMessage) {
     ChatStore chatStore = Store.value<ChatStore>(context);
-    chatStore.onReceiveMessage(chatMessage);
+    VibrationUtil.vibrate();
+    // 来自自己发送的消息
+    if (chatMessage.side == ChatSide.Sender) {
+      var message = chatStore.messages.firstWhere((ChatMessage message) => message.sharedMessageId == chatMessage.sharedMessageId);
+      if (message == null) {
+        chatStore.messages.add(chatMessage);
+        if (chatStore.currentMessageDialog != null && chatMessage.targetUserId == chatStore.currentMessageDialog.friendUserId) {
+          chatStore.currentMessages.add(chatMessage);
+        }
+      }
+    }
+    // 来自好友发送的消息
+    else {
+      chatStore.messages.add(chatMessage);
+      if (chatStore.currentMessageDialog != null && chatMessage.targetUserId == chatStore.currentMessageDialog.friendUserId) {
+        chatStore.currentMessages.add(chatMessage);
+      }
+    }
+
+    if (chatMessage.side == ChatSide.Receiver) {
+      if (chatStore.currentMessageDialog.friendUserId != chatMessage.targetUserId) {
+        MessageDialog messageDialog = chatStore.findMessageDialogByFriendUserId(chatMessage.targetUserId);
+        messageDialog.unreadCount++;
+      }
+    }
+    chatStore.update();
   }
 
   ChatMessage buildTextMessage(String content) {

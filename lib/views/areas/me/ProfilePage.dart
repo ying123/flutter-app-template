@@ -79,10 +79,12 @@ class _ProfilePageState extends State<ProfilePage> {
       var sessionStore = Store.value<SessionStore>(context);
       sessionStore.user.avatar = result["path"];
       sessionStore.setUser(sessionStore.user);
-      Toast.dismiss();
     }
     catch (e) {
       Toast.error(context, e.getMessage());
+    }
+    finally {
+      Toast.dismiss();
     }
   }
 

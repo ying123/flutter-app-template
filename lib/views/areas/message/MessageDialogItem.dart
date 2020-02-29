@@ -3,6 +3,7 @@ import 'package:canknow_flutter_ui/components/Badge.dart';
 import 'package:canknow_flutter_ui/components/Spaces.dart';
 import 'package:canknow_flutter_ui/routers/pageRouteBuilders/ApplicationPageRouteBuilder.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'file:///G:/project/applicaton/flutter-app-template/lib/views/components/FriendAvatar.dart';
 import 'package:flutter_app/models/MessageDialog.dart';
@@ -22,7 +23,7 @@ class _MessageDialogItemState extends State<MessageDialogItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, ApplicationPageRouteBuilder(ChatPage(friend: this.widget.messageDialog.friend),transitionDuration: Duration(microseconds: 300)));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => ChatPage(friend: this.widget.messageDialog.friend)));
       },
       child: Container(
         padding: EdgeInsets.all(Variables.contentPadding),
@@ -75,7 +76,7 @@ class _MessageDialogItemState extends State<MessageDialogItem> {
                         this.widget.messageDialog.chatMessage.previewContent,
                         style: TextStyle(
                             color: Variables.subColor,
-                            fontSize: Variables.fontSizeSmall
+                            fontSize: Variables.fontSizeSmaller
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),

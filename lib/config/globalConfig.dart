@@ -9,5 +9,5 @@ class GlobalConfig {
   static bool showLanguagesSetting = true;
   static bool showThemeSetting = true;
   static bool mustAuthorize = false;
-  static bool enableChat = false;
+  static bool enableChat = true;
 }

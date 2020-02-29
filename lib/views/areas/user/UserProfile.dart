@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/components/ApplicationIconButton.dart';
+import 'package:canknow_flutter_ui/components/Cell.dart';
 import 'package:canknow_flutter_ui/components/Spaces.dart';
 import 'package:canknow_flutter_ui/components/TextButton.dart';
 import 'package:canknow_flutter_ui/components/actionSheet/MenuActionSheet.dart';
@@ -122,11 +123,13 @@ class _UserProfileState extends State<UserProfile> {
           children: <Widget>[
             if (user != null) buildHeader(),
             Spaces.vComponentSpan,
-            if(friend != null) TextButton(text: ApplicationLocalizations.of(context).text('chat'), scene: Scene.white, onTap: () {
-              Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
-                return new ChatPage(friend: friend);
-              }));
-            },),
+            if(friend != null) Cell(
+              child: TextButton(text: ApplicationLocalizations.of(context).text('chat'), scene: Scene.white, onTap: () {
+                Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+                  return new ChatPage(friend: friend);
+                }));
+              },),
+            ),
             if(friend != null) TextButton(text: ApplicationLocalizations.of(context).text('voiceOrVideoChat'), scene: Scene.white, onTap: () {
 
             },),

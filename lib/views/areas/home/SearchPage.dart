@@ -1,4 +1,5 @@
 import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/ApplicationAppBarSearchBar.dart';
 import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +19,16 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-
     return Scaffold(
       appBar: ApplicationAppBar(
+        backgroundColor: Variables.appBarColor,
         automaticallyImplyLeading: false,
-        title: searchBar(),
+        brightness: Brightness.light,
+        title: ApplicationAppBarSearchBar(onSearch: () {
+
+        }, placeholder: '搜索用户名/手机号'),
       ),
-      body: SingleChildScrollView(
+      body: Material(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -64,52 +67,6 @@ class _SearchPageState extends State<SearchPage> {
             backgroundColor: Variables.backgroundColor,
           ),
         )).toList(),
-      ),
-    );
-  }
-
-  Widget searchBar() {
-    final ThemeData themeData = Theme.of(context);
-    return Container(
-      child: Row(
-        children: <Widget>[
-          Container(
-            child: IconButton(
-              onPressed: (){
-                Navigator.of(context).pop();
-              },
-              icon: ApplicationIcon('back', color: themeData.primaryIconTheme.color, size: Variables.componentSizeSmaller,),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.only(left: Variables.contentPadding, right: Variables.contentPadding),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Variables.borderColor, width: 1),
-                  borderRadius: const BorderRadius.all(const Radius.circular(Variables.componentSizeSmall)),
-                  color: Colors.transparent
-              ),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: TextField(
-                      autofocus: true,
-                      decoration: InputDecoration.collapsed(
-                          hintText: "搜索内容",
-                          hintStyle: TextStyle(color: themeData.primaryTextTheme.title.color, fontSize: Variables.fontSize)
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      onPressed: _search,
-                      icon: ApplicationIcon('search', size: Variables.componentSizeSmaller, color: Variables.placeholderColor),),
-                  )
-                ],
-              ),
-            ),
-          )
-        ],
       ),
     );
   }
