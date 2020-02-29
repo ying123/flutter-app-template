@@ -1,0 +1,103 @@
+{
+  "common": {
+    "actions": {
+      "save": "save",
+      "share": "share",
+      "cancel": "cancel",
+      "search": "search",
+      "submit": "submit"
+    },
+    "dialog": {
+      "ok": "ok",
+      "cancel": "cancel"
+    },
+    "message": {
+      "noNetworkAndCheckSetting": "there has error with network～ please check setting",
+      "clickScreenToReload": "click screen to reload",
+      "nothing": "nothing～"
+    }
+  },
+  "messages": {
+    "saveSuccess": "save success"
+  },
+  "contact": "contact",
+  "login":"login",
+  "register": "register",
+  "pleaseInputPhoneNumber": "please input phone number",
+  "otherLoginMethods": "other login methods",
+  "oneKeyLogin": "one key login",
+  "accountLogin": "account login",
+  "pleaseInputUserName": "please input userName",
+  "pleaseInputPassword": "please input password",
+  "getVerifyCode": "get verify code",
+  "appName": "canknow",
+  "pleaseInputCaptcha": "please input captcha",
+  "emergencyFreeze": "emergency freeze",
+  "profile": "profile",
+  "languages": "languages",
+  "languagesSetting": "languages setting",
+  "settings": "settings",
+  "about": "about",
+  "aboutUs": "about us",
+  "theme": "theme",
+  "themeSetting": "theme setting",
+  "checkUpdate": "check update",
+  "feedback": "feedback",
+  "yourFeedback": "your feedback",
+  "giveYourBestTimeForThisMoment": "Give your best time for this moment.",
+  "enterYourFeedback": "输入您的反馈意见",
+  "help": "help",
+  "howCanWeHelpYou": "How can we help you?",
+  "helpDescription": "It looks like you are experiencing problems\\nwith our sign up process. We are here to\\nhelp so please get in touch with us",
+  "chatWithUs": "chat with us",
+  "latest": "latest",
+  "language": {
+    "Auto": "follow system",
+    "ZH": "china",
+    "EN": "english"
+  },
+  "save": "save",
+  "bottomNavigation": {
+    "home": "home",
+    "user": "user",
+    "message": "message",
+    "friend": "friend",
+    "picture": "picture"
+  },
+  "picture": "picture",
+  "logout": "logout",
+  "userName": "user name",
+  "nickName": "nick name",
+  "statement": "statement",
+  "qrcode": "qrcode",
+  "friend": "friend",
+  "myFriend": "my friends",
+  "myMessage": "my message",
+  "newFriend": "new friend",
+  "groupChat": "group chat",
+  "friendRequest": "friend request",
+  "addFriend": "add friend",
+  "addGroup": "add group",
+  "noFriendRequestYet": "no friend request yet",
+  "noFriendsYet": "no friends yet",
+  "scan": "scan",
+  "scanQrcodeCard": "scan qrcode card",
+  "chat": "chat",
+  "passFriendRequest": "pass friend request",
+  "discover": "discover",
+  "me": "me",
+  "update": {
+    "appUpdate": "application update",
+    "update": "update",
+    "currentIsLatest": "current is latest"
+  },
+  "noMessageYet": "no message yet",
+  "setRemark": "set remark",
+  "block": "block",
+  "voiceOrVideoChat": "voice or video chat",
+  "myOrder": "my order",
+  "articleCollection": "article collection",
+  "followers": "followers",
+  "follows": "follows",
+  "orders": "orders"
+}
