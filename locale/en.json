@@ -89,6 +89,8 @@
   "update": {
     "appUpdate": "application update",
     "update": "update",
+    "updateNextTime": "update next time",
+    "updateRightNow": "update right now",
     "currentIsLatest": "current is latest"
   },
   "noMessageYet": "no message yet",
