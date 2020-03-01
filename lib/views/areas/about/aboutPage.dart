@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/application/AppHelper.dart';
 import 'package:flutter_app/application/Application.dart';
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/components/TextButton.dart';
 import 'package:canknow_flutter_ui/config/Scene.dart';
 import 'package:canknow_flutter_ui/locale/ApplicationLocalizations.dart';

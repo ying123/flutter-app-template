@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/locale/ApplicationLocalizations.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/apis/commonFetch.dart';
-import 'package:canknow_flutter_ui/components/DataEmpty.dart';
+import 'package:canknow_flutter_ui/components/dataEmpty/DataEmpty.dart';
 import 'package:flutter_app/views/areas/pictureLibrary/PictureCard.dart';
 import 'package:flutter_easyrefresh/ball_pulse_footer.dart';
 import 'package:flutter_easyrefresh/ball_pulse_header.dart';

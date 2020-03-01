@@ -1,8 +1,8 @@
 import 'package:canknow_flutter_ui/components/toast/Toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter_app/apis/article.dart';
 import 'package:flutter_app/models/ArticleModel.dart';

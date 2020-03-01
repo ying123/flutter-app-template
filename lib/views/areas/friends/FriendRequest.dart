@@ -1,4 +1,4 @@
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/components/EmptyContainer.dart';
 import 'package:canknow_flutter_ui/utils/FileUtil.dart';
 import 'package:flutter/material.dart';

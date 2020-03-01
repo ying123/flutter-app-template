@@ -23,7 +23,7 @@ class VideoItem extends StatelessWidget {
               imageUrl: this.model.cover,
               fit: BoxFit.cover,
               errorWidget: (context, url, error) => Container(
-                child: Image.asset('assets/images/data-empty.png'),
+                child: Image.asset('assets/images/data-empty.png', package: "canknow_flutter_ui",),
               ),
             ),
             Container(

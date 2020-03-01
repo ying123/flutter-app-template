@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIconButton.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationIconButton/ApplicationIconButton.dart';
 import 'package:canknow_flutter_ui/components/Spaces.dart';
 import 'package:canknow_flutter_ui/utils/DeviceUtil.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 import 'dart:typed_data';
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/components/Spaces.dart';
 import 'package:canknow_flutter_ui/components/TextButton.dart';
 import 'package:canknow_flutter_ui/config/Scene.dart';

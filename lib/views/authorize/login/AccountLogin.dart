@@ -1,5 +1,5 @@
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
-import 'package:canknow_flutter_ui/components/Cell.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/cell/Cell.dart';
 import 'package:canknow_flutter_ui/components/Input.dart';
 import 'package:canknow_flutter_ui/components/TextButton.dart';
 import 'package:canknow_flutter_ui/components/toast/Toast.dart';

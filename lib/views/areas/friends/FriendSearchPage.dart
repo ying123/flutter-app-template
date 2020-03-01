@@ -1,9 +1,9 @@
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/components/Loading.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter/material.dart';
-import 'file:///G:/project/canknow/canknow_flutter_ui/lib/components/ApplicationAppBarSearchBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBarSearchBar/ApplicationAppBarSearchBar.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_app/models/CommonUser.dart';
 import 'package:flutter_app/apis/user.dart';

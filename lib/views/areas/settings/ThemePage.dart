@@ -1,4 +1,4 @@
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/locale/ApplicationLocalizations.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter/material.dart';

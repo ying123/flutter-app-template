@@ -8,7 +8,7 @@ import 'package:canknow_flutter_ui/utils/ImageUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/apis/file.dart';
 import 'package:flutter_app/apis/profile.dart';
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:flutter_app/store/index.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';
 import 'package:flutter_app/store/session.dart';

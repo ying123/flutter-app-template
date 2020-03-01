@@ -1,4 +1,4 @@
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
 import 'package:canknow_flutter_ui/components/TextButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/models/VideoModel.dart';

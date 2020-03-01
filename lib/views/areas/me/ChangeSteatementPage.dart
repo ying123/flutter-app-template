@@ -1,5 +1,5 @@
-import 'package:canknow_flutter_ui/components/ApplicationAppBar.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationAppBar/ApplicationAppBar.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/components/Input.dart';
 import 'package:canknow_flutter_ui/components/toast/Toast.dart';
 import 'package:canknow_flutter_ui/styles/variables.dart';

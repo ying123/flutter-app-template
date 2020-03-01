@@ -1,8 +1,9 @@
-import 'package:canknow_flutter_ui/components/ApplicationIconButton.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationIconButton/ApplicationIconButton.dart';
 import 'package:canknow_flutter_ui/config/ComponentSize.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/application/AuthorizationService.dart';
-import 'package:canknow_flutter_ui/components/ApplicationIcon.dart';
+import 'package:canknow_flutter_ui/components/applicationIcon/ApplicationIcon.dart';
 import 'package:canknow_flutter_ui/components/toast/Toast.dart';
 import 'package:flutter_app/config/appConfig.dart';
 import 'package:canknow_flutter_ui/locale/ApplicationLocalizations.dart';
